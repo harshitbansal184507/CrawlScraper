@@ -53,6 +53,7 @@ type ScrapeError struct {
 	Message       string    `json:"message"`                 
 	HTTPStatus    int       `json:"http_status,omitempty"` 
 	Timestamp     time.Time `json:"timestamp"`                
+	RetryPossible bool      `json:"RetryPossible"`
 	Details       string    `json:"details,omitempty"`      
 }
 
