@@ -17,8 +17,7 @@ Thanks for your interest in contributing! 🎉
 4. **Make your changes**
 5. **Test**:
    ```bash
-   go test ./...
-   go run examples/basic/main.go
+   go run example_single_url.go //change the url as per requirement
    ```
 6. **Submit a Pull Request**
 
@@ -72,9 +71,9 @@ func TestValidateURL(t *testing.T) {
 
 Keep them clear:
 ```bash
-git commit -m "Fix timeout handling in HTTP client"
-git commit -m "Add support for custom headers"
-git commit -m "Update README with installation steps"
+git commit -m "fix(HTTP CLIENT):timeout handling in HTTP client"
+git commit -m "feat(Parser):Add support for custom headers"
+git commit -m "docs(Readme) :Update README with installation steps"
 
 
 ## Pull Request Process
