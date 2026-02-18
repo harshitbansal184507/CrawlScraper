@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CrawlScraper — Self-Hosted Web Scraping Engine</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div class="grid-bg"></div>
+
+<nav>
+  <a href="static/logo.png" class="nav-logo">
+   <img src="static/logo.png" alt="CrawlScraper logo" />
+      <circle cx="50" cy="50" r="48" stroke="white" stroke-width="4"/>
+      <polygon points="50,20 70,38 70,62 50,80 30,62 30,38" stroke="white" stroke-width="4" fill="none"/>
+      <circle cx="50" cy="52" r="14" fill="white"/>
+      <circle cx="54" cy="56" r="4" fill="#5b6bff"/>
+      <line x1="36" y1="36" x2="16" y2="24" stroke="#5b6bff" stroke-width="5" stroke-linecap="round"/>
+      <line x1="30" y1="50" x2="8" y2="46" stroke="#5b6bff" stroke-width="5" stroke-linecap="round"/>
+      <line x1="36" y1="64" x2="18" y2="76" stroke="white" stroke-width="5" stroke-linecap="round"/>
+      <line x1="64" y1="36" x2="84" y2="24" stroke="#5b6bff" stroke-width="5" stroke-linecap="round"/>
+      <line x1="70" y1="50" x2="92" y2="46" stroke="#5b6bff" stroke-width="5" stroke-linecap="round"/>
+      <line x1="64" y1="64" x2="82" y2="76" stroke="white" stroke-width="5" stroke-linecap="round"/>
+    </svg>
+    <span>Crawl<em>Scraper</em></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#features">Features</a></li>
+    <li><a href="#install">Install</a></li>
+    <li><a href="#contribute">Contribute</a></li>
+    <li>
+      <a href="https://github.com/harshitbansal184507/CrawlScraper" target="_blank" class="github-star">
+        <span class="star-icon">★</span> Star on GitHub
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-glow"></div>
+
+  <div class="hero-badge">
+    <span class="badge-dot"></span>
+    v0.1 · Backend Ready · Frontend Coming Soon
+  </div>
+
+  <img class="hero-logo" src="static/logo.png" alt="CrawlScraper" />
+
+    <circle cx="50" cy="50" r="46" stroke="white" stroke-width="3.5"/>
+    <polygon points="50,18 72,36 72,64 50,82 28,64 28,36" stroke="white" stroke-width="3.5" fill="none"/>
+    <circle cx="50" cy="52" r="15" fill="white"/>
+    <circle cx="55" cy="57" r="5" fill="#5b6bff"/>
+    <line x1="34" y1="34" x2="12" y2="20" stroke="#5b6bff" stroke-width="5.5" stroke-linecap="round"/>
+    <line x1="28" y1="50" x2="5" y2="45" stroke="#5b6bff" stroke-width="5.5" stroke-linecap="round"/>
+    <line x1="34" y1="66" x2="14" y2="80" stroke="white" stroke-width="5.5" stroke-linecap="round"/>
+    <line x1="66" y1="34" x2="88" y2="20" stroke="#5b6bff" stroke-width="5.5" stroke-linecap="round"/>
+    <line x1="72" y1="50" x2="95" y2="45" stroke="#5b6bff" stroke-width="5.5" stroke-linecap="round"/>
+    <line x1="66" y1="66" x2="86" y2="80" stroke="white" stroke-width="5.5" stroke-linecap="round"/>
+  </svg>
+
+  <h1>
+    Web Scraping,<br/>
+    <span class="blue">Self-Hosted.</span><br/>
+    <span class="dim">No Limits.</span>
+  </h1>
+
+  <p>
+    A high-performance Go package and self-hosted interface for scraping, crawling, and structured data extraction. Built for developers who want full control.
+  </p>
+
+  <div class="hero-ctas">
+    <a href="https://github.com/harshitbansal184507/CrawlScraper" target="_blank" class="btn-primary">
+      ⬇ Get Started on GitHub
+    </a>
+    <a href="#features" class="btn-secondary">
+      → Explore Features
+    </a>
+  </div>
+</section>
+
+<div class="stats-bar">
+  <div class="stat-item">
+    <span class="stat-num"><span>100</span>%</span>
+    <span class="stat-label">Written in Go</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">MIT</span>
+    <span class="stat-label">Open Source</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num"><span>0</span> deps</span>
+    <span class="stat-label">External Bloat</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">Self<span>-</span>Hosted</span>
+    <span class="stat-label">Your Data, Your Rules</span>
+  </div>
+</div>
+
+<section class="code-section" id="features">
+  <div class="reveal">
+    <div class="section-label">// quick start</div>
+    <h2 class="section-title">Simple API, Powerful Results</h2>
+    <p class="section-sub">Drop into any Go project. Start scraping in minutes with a clean, expressive API.</p>
+
+    <!-- Tab buttons -->
+    <div class="code-tabs">
+      <button class="tab-btn active" onclick="switchTab('single')">Single URL</button>
+      <button class="tab-btn" onclick="switchTab('multi')">Multiple URLs</button>
+    </div>
+
+    <!-- Single URL Example -->
+    <div class="code-block" id="tab-single">
+      <div class="code-bar">
+        <div class="dot dot-r"></div>
+        <div class="dot dot-y"></div>
+        <div class="dot dot-g"></div>
+        <span class="code-file">example_single_url.go</span>
+      </div>
+      <pre><span class="kw">package</span> <span class="pkg">main</span>
+
+<span class="kw">import</span> (
+    <span class="str">"fmt"</span>
+    <span class="str">"time"</span>
+    <span class="str">"github.com/harshitbansal184507/CrawlScraper/pkg/scraper"</span>
+)
+
+<span class="kw">func</span> <span class="fn">main</span>() {
+    s := scraper.<span class="fn">New</span>(scraper.<span class="fn">DefaultConfig</span>())
+    start := time.<span class="fn">Now</span>()
+
+    result, _ := s.<span class="fn">ScrapeURL</span>(<span class="str">"https://example.com"</span>)
+    time_taken := time.<span class="fn">Since</span>(start)
+
+    fmt.<span class="fn">Println</span>(<span class="str">"Time taken for scraping :"</span>, time_taken)
+
+    <span class="kw">if</span> result.Status == <span class="str">"success"</span> {
+        fmt.<span class="fn">Printf</span>(<span class="str">"Title: %s\n"</span>, result.Data.Title)
+        fmt.<span class="fn">Printf</span>(<span class="str">"Paragraphs: %d\n"</span>, <span class="fn">len</span>(result.Data.Paragraphs))
+        fmt.<span class="fn">Printf</span>(<span class="str">"Images: %d\n"</span>, result.Data.Images)
+    }
+}</pre>
+    </div>
+
+    <!-- Multi URL Example -->
+    <div class="code-block hidden" id="tab-multi">
+      <div class="code-bar">
+        <div class="dot dot-r"></div>
+        <div class="dot dot-y"></div>
+        <div class="dot dot-g"></div>
+        <span class="code-file">example_multi_url.go</span>
+      </div>
+      <pre><span class="kw">package</span> <span class="pkg">main</span>
+
+<span class="kw">import</span> (
+    <span class="str">"fmt"</span>
+    <span class="str">"time"</span>
+    <span class="str">"github.com/harshitbansal184507/CrawlScraper/pkg/scraper"</span>
+)
+
+<span class="kw">func</span> <span class="fn">main</span>() {
+    s := scraper.<span class="fn">New</span>(scraper.<span class="fn">DefaultConfig</span>())
+
+    req := &scraper.ScrapeRequest{
+        URLs: <span class="kw">map</span>[<span class="pkg">string</span>]<span class="pkg">string</span>{
+            <span class="str">"example"</span>:    <span class="str">"https://example.com"</span>,
+            <span class="str">"httpbin"</span>:    <span class="str">"https://httpbin.org/html"</span>,
+            <span class="str">"hackernews"</span>: <span class="str">"https://news.ycombinator.com"</span>,
+        },
+    }
+
+    start := time.<span class="fn">Now</span>()
+    resp, err := s.<span class="fn">Scrape</span>(req)
+    <span class="kw">if</span> err != <span class="kw">nil</span> {
+        fmt.<span class="fn">Println</span>(<span class="str">"err:"</span>, err)
+    }
+    fmt.<span class="fn">Println</span>(<span class="str">"Time taken (ms) :"</span>, time.<span class="fn">Since</span>(start).<span class="fn">Milliseconds</span>())
+
+    <span class="kw">for</span> key, result := <span class="kw">range</span> resp.Results {
+        <span class="kw">if</span> result.Status == <span class="str">"success"</span> {
+            fmt.<span class="fn">Printf</span>(<span class="str">"%s:\n"</span>, key)
+            fmt.<span class="fn">Printf</span>(<span class="str">"  Title: %s\n"</span>, result.Data.Title)
+            fmt.<span class="fn">Printf</span>(<span class="str">"  Content: %d chars, %d paragraphs, %d links\n"</span>,
+                <span class="fn">len</span>(result.Data.TextContent),
+                <span class="fn">len</span>(result.Data.Paragraphs),
+                <span class="fn">len</span>(result.Data.Links))
+            fmt.<span class="fn">Printf</span>(<span class="str">"  Time: %v\n\n"</span>, result.Metadata.ResponseTime)
+        } <span class="kw">else</span> {
+            fmt.<span class="fn">Printf</span>(<span class="str">"❌ %s: %s\n\n"</span>, key, result.Error.Message)
+        }
+    }
+}</pre>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<section class="features reveal">
+  <div class="features-header">
+    <div class="section-label">// capabilities</div>
+    <h2 class="section-title">Everything You Need to Scrape the Web</h2>
+    <p class="section-sub">Built on Go's concurrency model for fast, reliable data extraction at scale.</p>
+  </div>
+
+  <div class="features-grid">
+    
+    <div class="feature-card">
+      <div class="feature-icon">⚡</div>
+      <h3>Concurrent Scraping</h3>
+      <p>Leverage Go's goroutines for blazing-fast parallel scraping. Scrape hundreds of pages simultaneously.</p>
+    </div>
+   
+    <div class="feature-card">
+      <div class="feature-icon">🔧</div>
+      <h3>Custom Headers</h3>
+      <p>Set custom HTTP headers, user agents, cookies, and authentication for any target site or API.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🏠</div>
+      <h3>Self-Hosted Interface <span class="coming-soon">Soon</span></h3>
+      <p>A full visual UI for managing scraping jobs, viewing results, and scheduling tasks — running on your own server.</p>
+    </div>
+   
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="install-section reveal" id="install">
+  <div class="section-label">// installation</div>
+  <h2 class="section-title">Up & Running in Minutes</h2>
+  <p class="section-sub">A single Go module, dead simple to integrate.</p>
+
+  <div class="install-steps">
+    <div class="install-step">
+      <div class="step-num">STEP 01</div>
+      <h4>Fork & Clone</h4>
+      <p style="color: var(--muted); font-size: 0.85rem;">Fork the repo and clone your fork locally.</p>
+      <code class="cmd">git clone https://github.com/YOUR_USERNAME/CrawlScraper.git</code>
+    </div>
+    <div class="install-step">
+      <div class="step-num">STEP 02</div>
+      <h4>Install Dependencies</h4>
+      <p style="color: var(--muted); font-size: 0.85rem;">Download all Go module dependencies.</p>
+      <code class="cmd">go mod download</code>
+    </div>
+    <div class="install-step">
+      <div class="step-num">STEP 03</div>
+      <h4>Run the Example</h4>
+      <p style="color: var(--muted); font-size: 0.85rem;">Test with the example file. Change the URL as needed.</p>
+      <code class="cmd">go run examples/example_single_url.go</code>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="contribute-section reveal" id="contribute">
+  <div class="contribute-header">
+    <div class="section-label">// contributing</div>
+    <h2 class="section-title">Help Build CrawlScraper 🕷️</h2>
+    <p class="section-sub" style="margin: 0 auto; max-width: 480px;">Thanks for your interest in contributing! Every bug fix, feature, and doc improvement makes a difference.</p>
+  </div>
+
+  <div class="contribute-grid">
+    <div class="contribute-card">
+      <h4>🐛 Found a Bug?</h4>
+      <p>Check existing issues first. If it's new, open one with what happened, what you expected, and a code snippet to reproduce it.</p>
+    </div>
+    <div class="contribute-card">
+      <h4>✨ Feature Ideas?</h4>
+      <p>Open an issue to discuss it first. Get feedback from the community before starting, then submit a PR when ready.</p>
+    </div>
+    <div class="contribute-card">
+      <h4>📝 Docs?</h4>
+      <p>Fix typos, add examples, clarify confusing parts. Documentation PRs are always welcome and highly appreciated.</p>
+    </div>
+  </div>
+
+  <div class="commit-examples">
+    <h4>Commit Message Convention</h4>
+    <div class="commit-line"><span class="type">fix</span><span class="op">(</span><span class="scope">HTTP CLIENT</span><span class="op">):</span> <span class="msg">timeout handling in HTTP client</span></div>
+    <div class="commit-line"><span class="type">feat</span><span class="op">(</span><span class="scope">Parser</span><span class="op">):</span> <span class="msg">Add support for custom headers</span></div>
+    <div class="commit-line"><span class="type">docs</span><span class="op">(</span><span class="scope">Readme</span><span class="op">):</span> <span class="msg">Update README with installation steps</span></div>
+    <div class="commit-line"><span class="type">test</span><span class="op">(</span><span class="scope">scraper</span><span class="op">):</span> <span class="msg">Add unit tests for URL validation</span></div>
+  </div>
+</section>
+
+<section class="cta-section reveal">
+  <h2>Ready to Crawl?</h2>
+  <p>Star the project, try it out, and become a part of the community.</p>
+  <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+    <a href="https://github.com/harshitbansal184507/CrawlScraper" target="_blank" class="btn-primary">
+      ★ Star on GitHub
+    </a>
+    <a href="https://github.com/harshitbansal184507/CrawlScraper/issues" target="_blank" class="btn-secondary">
+      Open an Issue
+    </a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 <a href="https://github.com/harshitbansal184507" target="_blank">harshitbansal184507</a> · MIT License · Made with 🕷️ in Go</p>
+  <div class="footer-links">
+    <a href="https://github.com/harshitbansal184507/CrawlScraper" target="_blank">GitHub</a>
+    <a href="https://github.com/harshitbansal184507/CrawlScraper/issues" target="_blank">Issues</a>
+    <a href="https://github.com/harshitbansal184507/CrawlScraper/blob/main/LICENSE" target="_blank">License</a>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+
+</body>
+</html>
