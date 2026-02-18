@@ -36,7 +36,7 @@ func main() {
 	for key, result := range resp.Results {
 		if result.Status == "success" {
 			successCount++
-			fmt.Printf("✅ %s:\n", key)
+			fmt.Printf("%s:\n", key)
 			fmt.Printf("   Title: %s\n", result.Data.Title)
 			fmt.Printf("   Content: %d chars, %d paragraphs, %d links\n",
 				len(result.Data.TextContent),
